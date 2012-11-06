@@ -1,0 +1,398 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>יצחק מאירוביץ, מתכנת בJavaScript</title>
+		<!-- https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.css
+		https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+		https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.js
+		-->
+		<link rel="stylesheet" href="http://javascriptphp.com/cv/ym/jqmobile-1.2/css/jquery.mobile.css" />
+		<link rel="stylesheet" href="http://javascriptphp.com/cv/ym/jqmobile-1.2/css/jqm-docs.css" />
+		<link rel="stylesheet" href="http://javascriptphp.com/cv/ym/jqmobile-1.2/css/my.css" />
+		<style>	.title {
+				text-align:center;
+			}
+			li {
+				list-style: disc !important;
+			}
+			.ui-field-contain {
+				padding: 15px 19px 15px 20px;
+			}
+			.form_title, .form_subtitle {
+				padding-right:20px;
+			}
+			.c11 {
+				list-style-type:disc;
+				margin:0;
+				padding:0
+			}
+			.form_title,.form_subtitle{
+				color:white;
+				font-weight: normal;
+			}
+			.background{
+				background: #1e5799; /* Old browsers */
+				/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+				background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNTc5OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzI5ODlkOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzIwN2NjYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ZGI5ZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+				background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* IE10+ */
+				background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-8 */
+
+			}
+</style>
+	</head>
+	<body style="direction:rtl;">
+		<div data-role="page" id="page1">
+			<div data-role="content">
+				<div class="ui-body ui-body-e">
+					<a href="#page1">
+					<div style=" text-align:center">
+						<img id="gov_logo" style="width: 288px; height: 100px" src="http://mof.gov.il/Style%20Library/Images/Header/header_flag.jpg" />
+					</div>
+					</a>
+					<h2 class="title">
+					יצחק מאירוביץ
+					<br/>
+					מתכנת ב&nbsp;JavaScript
+					</h2>
+					<h2 id="header">בא, תכיר לי!</h2>
+
+					<a id="button_green" data-role="button" data-transition="flip" data-theme="f" href="#goals" data-icon="arrow-l" data-iconpos="left">הגדרת המטרות העסקיות</a>
+					<a id="button_blue" data-role="button" data-transition="flip" data-theme="b" href="#skills" data-icon="arrow-l" data-iconpos="left">כישורים</a>
+
+					<a id="button_green" data-role="button" data-transition="flip" data-theme="f" href="#experience" data-icon="arrow-l" data-iconpos="left">ניסיון</a>
+					<a id="button_blue" data-role="button" data-transition="flip" data-theme="b" href="#contact" data-icon="arrow-l" data-iconpos="left">צור קשר</a>
+
+				</div>
+
+			</div>
+		</div>
+		<div data-role="page" id="goals">
+			<div data-theme="a" data-role="header">
+				<a data-role="button" href="javascript:history.go(-1);" data-icon="home" data-iconpos="left" class="ui-btn-left" data-transition="slide"  data-direction="reverse" > חוזר</a>
+				<a data-role="button" href="#page1" data-icon="home" data-iconpos="left" class="ui-btn-right"  data-transition="slide"  data-direction="reverse" > דף הבית</a>
+				<h3> יצחק מאירוביץ</h3>
+			</div>
+			<div data-role="content">
+				<div data-role="fieldcontain" class="background">
+					<div class="form_title">
+						Professional Goals
+					</div>
+					<div class="form_subtitle">
+						<div class="form_subtitle_text">
+							To deepen my understanding and expand my knowledge of JavaScript in cutting edge, client-side applications
+						</div>
+					</div>
+				</div>
+				<div data-role="fieldcontain" class="ui-body ui-body-e">
+					<h4>JavaScript Development</h4>
+					<ul>
+						<li>
+							Increase my use of HTML5 with an interest in Local storage, Web Workers and Web Sockets
+						</li>
+						<li>
+							Single Page Applications (SPA)
+						</li>
+						<li>
+							MVC Frameworks
+						</li>
+					</ul>
+				</div>
+
+				<div data-role="fieldcontain" class="ui-body ui-body-e">
+					<h4>Instruction</h4>
+					<ul>
+						<li>
+							To lead other junior developers on their path to further understanding JavaScript
+						</li>
+						<li>
+							Continue teaching professionally whether online or in-class presentations
+						</li>
+					</ul>
+				</div>
+
+				<div data-role="controlgroup" data-type="horizontal">
+					<a id="next" data-role="button" data-transition="slide" data-theme="f"  href="#contact" data-icon="arrow-l" data-iconpos="left">Contact Me</a>
+				</div>
+			</div>
+
+			<div data-role="footer" data-position="fixed" data-id="page_footer">
+				<a data-role="button" href="javascript:history.go(-1);" data-icon="home" data-iconpos="left" class="ui-btn-left" data-transition="slide"  data-direction="reverse" > חוזר</a>
+				<a data-role="button" href="#page1" data-icon="home" data-iconpos="left" class="ui-btn-right"  data-transition="slide"  data-direction="reverse" > דף הבית</a>
+				<h3>מטרות מקצועי</h3>
+			</div>
+		</div>
+		<div data-role="page" id="skills">
+			<div data-theme="a" data-role="header">
+				<a data-role="button" href="javascript:history.go(-1);" data-icon="home" data-iconpos="left" class="ui-btn-left" data-transition="slide"  data-direction="reverse" > חוזר</a>
+				<a data-role="button" href="#page1" data-icon="home" data-iconpos="left" class="ui-btn-right"  data-transition="slide"  data-direction="reverse" > דף הבית</a>
+				<h3> יצחק מאירוביץ</h3>
+			</div>
+			<div data-role="content">
+				<div data-role="fieldcontain" class="background">
+
+					<div class="form_title">
+						כישורים
+					</div>
+					<div class="form_subtitle">
+						<div class="form_subtitle_text">
+							To deepen my understanding and expand my knowledge of JavaScript in cutting edge, client-side applications
+						</div>
+					</div>
+				</div>
+				<div data-role="fieldcontain" class="ui-body ui-body-e" style="direction:ltr;">
+					<ul>
+						<li>
+							Pure OO JavaScript
+						</li>
+						<li>
+							jQuery, jQueryUI, jQuery Mobile
+						</li>
+						<li>
+							Sencha ExtJS, Sencha Touch
+						</li>
+						<li>
+							YUI
+						</li>
+						<li>
+							Dojo
+						</li>
+						<li>
+							Backbone
+						</li>
+						<li>
+							CSS2, CSS3
+						</li>
+						<li>
+							HTML5, DHTML
+						</li>
+						<li>
+							AJAX, JSON, XML
+						</li>
+						<li>
+							DOM Manipulation
+						</li>
+						<li>
+							JavaScript Injections, Templating
+						</li>
+						<li>
+							CSS Injections, Document Reflow
+						</li>
+						<li>
+							Wordpress, Drupal
+						</li>
+						<li>
+							UX&nbsp;/&nbsp; Usability
+						</li>
+					</ul>
+				</div>
+				<div data-role="controlgroup" data-type="horizontal">
+					<a id="next" data-role="button" data-transition="slide" data-theme="f"  href="#contact" data-icon="arrow-l" data-iconpos="left">Contact Me</a>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed" data-id="page_footer">
+				<a data-role="button" href="javascript:history.go(-1);" data-icon="home" data-iconpos="left" class="ui-btn-left" data-transition="slide"  data-direction="reverse" > חוזר</a>
+				<a data-role="button" href="#page1" data-icon="home" data-iconpos="left" class="ui-btn-right"  data-transition="slide"  data-direction="reverse" > דף הבית</a>
+				<h3>כישורים</h3>
+			</div>
+		</div>
+		<div data-role="page" id="experience">
+			<div data-theme="a" data-role="header">
+				<a data-role="button" href="javascript:history.go(-1);" data-icon="home" data-iconpos="left" class="ui-btn-left" data-transition="slide"  data-direction="reverse" > חוזר</a>
+				<a data-role="button" href="#page1" data-icon="home" data-iconpos="left" class="ui-btn-right"  data-transition="slide"  data-direction="reverse" > דף הבית</a>
+				<h3> יצחק מאירוביץ</h3>
+			</div>
+			<div data-role="content">
+				<div data-role="fieldcontain" class="background">
+
+					<div class="form_title">
+						נסיון
+					</div>
+					<div class="form_subtitle">
+						<div class="form_subtitle_text">
+							<h5>For 13 years I have devoted my efforts to building quality web applications that bring increased ROI to my clients.
+							I strongly believe in applying a strong process structure to application development. </h5>
+						</div>
+					</div>
+				</div>
+
+				<div data-role="fieldcontain" class="ui-body ui-body-e" style="direction:ltr;">
+					<h4>Client-side Web Development</h4>
+					<ul class="c11" start="1">
+						<li class="c4 c0">
+							<span class="c2">Programming in JavaScript for 13 years</span>
+						</li>
+						<li class="c0 c4">
+							<span class="c2">Self-motivated and self-management capabilities, ambitious, creative, along with great team spirit and collaboration</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">Autodidact; self-taught in JavaScript and PHP/MySQL</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">Passion for technology &amp; consumer web / mobile products.</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">A good understanding of open standards &amp; protocols.</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">Knowledge of user experience design and information architecture principles and techniques.</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">An ability to rapidly and effectively understand and translate client business requirements into technical solutions</span>
+						</li>
+						<li class="c16 c0">
+							<span class="c2">Progressive Enhancement / Graceful Degradation, Cross-Browser Bugs and Inconsistencies (primarily IE7-8)</span>
+						</li>
+						<li class="c0 c16">
+							<span class="c2">Extensive Ajax development skills (a deep understanding of the lifecycle of an AJAX call)</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">Experienced with DOM events, traversing &amp; memory management, DHTML.</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">Browser debugging (Firebug, Chrome debugging and IE web tools).</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">SEO Basics</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">Experienced at table-less design using CSS</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">Experience writing and maintaining PHP/MySQL applications</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">Regular use of </span>
+							<span class="c2">JavaScript design patterns</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">A</span>
+							<span class="c2">nalytical thinker and problem solver</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">Wrote SPA e-commerce application &nbsp;for online ticket ordering system using ExtJS</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">Created global caching object as a jQuery plugin</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">Created super-fast search algorithm for searching large datasets (10,000-50,000 records) </span>
+							<span class="c2 c19">Client-side</span>
+							<span class="c2">&nbsp;using pure JavaScript</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">Converted Microsoft Validator plugin to jQuery plugin</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">Developed custom form layout generator to override jqGrid&rsquo;s native form implementation</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">Developed jQuery Mobile site for locating lost pension accounts &nbsp;to be used by ALL citizens of Israel (live in Jan 2013)</span>
+						</li>
+					</ul>
+				</div>
+
+				<div data-role="fieldcontain" class="ui-body ui-body-e" style="direction:ltr;">
+					<h4>Systems Analyst</h4>
+
+					<ul class="c11" start="25">
+						<li class="c4 c0">
+							<span class="c2">Comprehend the project and product requirements and functionality by reading and communicating with different stakeholders</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">Analyze the user experience and continually look for ways to improve it </span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">Communicate with stakeholders to get feedback and iteratively enhance the UI</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">Experience generating and maintaining full Software Development Lifecycle (SDLC) documentation</span>
+						</li>
+						<li class="c4 c0">
+							<span class="c2">Ability to sell clients new ideas and functionality; focused on ROI</span>
+						</li>
+					</ul>
+				</div>
+				<div data-role="controlgroup" data-type="horizontal">
+					<a id="next" data-role="button" data-transition="slide" data-theme="f"  href="#contact" data-icon="arrow-l" data-iconpos="left">Contact Me</a>
+				</div>
+			</div>
+			<div data-role="footer" data-position="fixed" data-id="page_footer">
+				<a data-role="button" href="javascript:history.go(-1);" data-icon="home" data-iconpos="left" class="ui-btn-left" data-transition="slide"  data-direction="reverse" > חוזר</a>
+				<a data-role="button" href="#page1" data-icon="home" data-iconpos="left" class="ui-btn-right"  data-transition="slide"  data-direction="reverse" > דף הבית</a>
+				<h3>נסיון</h3>
+			</div>
+		</div>
+
+
+		<div data-role="page" id="contact">
+			<div data-theme="a" data-role="header">
+				<a data-role="button" href="javascript:history.go(-1);" data-icon="home" data-iconpos="left" class="ui-btn-left" data-transition="slide"  data-direction="reverse" > חוזר</a>
+				<a data-role="button" href="#page1" data-icon="home" data-iconpos="left" class="ui-btn-right"  data-transition="slide"  data-direction="reverse" > דף הבית</a>
+				<h3> יצחק מאירוביץ</h3>
+			</div>
+			<div data-role="content">
+				<div data-role="fieldcontain" class="background">
+
+					<div class="form_title">
+						צור קשר
+					</div>
+					<div class="form_subtitle">
+						<div class="form_subtitle_text">
+							<h5>I would be happy to sit down and discuss my relevant experience with you. Please don't hesitate to contact me.</h5>
+						</div>
+					</div>
+				</div>
+
+				<div data-role="fieldcontain" class="ui-body ui-body-e" style="direction:ltr;">
+					<ul class="pageitem">
+						<li class="menu">
+							<a class="noeffect" href="mailto:ymeirovich@gmail.com?cc=&amp;subject=יצירת קשר עם יצחק מאירוביץ&amp;body=אני רוצה לגרום לעסק להרוויח">
+							<img alt="mail" src="http://javascriptphp.com/cv/ym/jqmobile-1.2/css/images/mail.png">
+							<span class="name">שלח מייל</span>
+							<span class="arrow"></span>
+							</a>
+						</li>
+
+						<li class="menu">
+							<a class="noeffect" href="sms:0527563792">
+							<img alt="sms" src="http://javascriptphp.com/cv/ym/jqmobile-1.2/css/images/messages.png">
+							<span class="name">SMS</span>
+							<span class="comment"></span>
+							<span class="arrow"></span>
+							</a>
+						</li>
+						<li class="menu">
+							<a class="noeffect" href="tel:0527563792">
+							<img alt="telephone" src="http://javascriptphp.com/cv/ym/jqmobile-1.2/css/images/telephone.png">
+							<span class="name">התקשר</span>
+							<span class="arrow"></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div data-role="footer" data-position="fixed" data-id="page_footer">
+				<a data-role="button" href="javascript:history.go(-1);" data-icon="home" data-iconpos="left" class="ui-btn-left" data-transition="slide"  data-direction="reverse" > חוזר</a>
+				<a data-role="button" href="#page1" data-icon="home" data-iconpos="left" class="ui-btn-right"  data-transition="slide"  data-direction="reverse" > דף הבית</a>
+				<h3>צור קשר</h3>
+			</div>
+		</div>
+		<script src="http://javascriptphp.com/cv/ym/jquery-1.8.2.js">
+		</script>
+		<script src="http://javascriptphp.com/cv/ym/jqm-docs.js">
+		</script>
+		<script src="http://javascriptphp.com/cv/ym/jqmobile-1.2/js/">
+		</script>
+		<script src="http://javascriptphp.com/cv/ym/my.js">
+		</script>
+	</body>
+</html>
